@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+
     <header id="header">
         <img src="./assets/images/logo.png" class="image-logo" alt="logo">
         <ul class="menu-list">
-            <li class="active">
-                <a href="#">About Us</a>
+            <li class="{{ request()->path() == '/' ? 'active' : '' }}">
+                <a href="/about-us">About Us</a>
             </li>
             <li>
                 <a href="#">Our Product</a>
             </li>
-            <li>
-                <a href="#">Delivery</a>
+            <li class="{{ request()->path() == 'delivery' ? 'active' : '' }}">
+                <a href="/delivery">Delivery</a>
             </li>
         </ul>
         <div class="menu-actions">
